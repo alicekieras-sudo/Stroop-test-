@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stroop Practice</title>
+</head>
+<body>
+
+<h1 class="center" style="color: #1F4654;">PRACTICE ROUND</h1>
+<div class="center"><p class="disclaimer">This is just to learn how the test works.  
+There is no timer and nothing is saved.</p></div>
+
+<div class="stroop">
+<h1 id="stimulus">RED</h1>
+
+  <button class="button" onclick="answer('Red')"><span class="button_top">Red</span></button>
+  <button class="button" onclick="answer('Blue')"><span class="button_top">Blue</span></button>
+  <button class="button" onclick="answer('Yellow')"><span class="button_top">Yellow</span></button>
+  <button class="button" onclick="answer('Green')"><span class="button_top">Green</span></button>
+  <button class="button" onclick="answer('Black')"><span class="button_top">Black</span></button>
+
+<p class="button_row">Correct:<span id="correct">0</span>
+Total:<span id="total">0</span></p>
+</div>
+
+<br>
+<form action="form.html" class="center">
+  <button class="button">
+    <span class="button_top">To the form</span>
+  </button>
+</form>
+
+<script src="practise.js"></script>
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
