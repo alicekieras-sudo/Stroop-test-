@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<form id="infoForm">
+  <table>
+    <tr class="disclaimer">
+      <td>What year group are you in?</td>
+      <td>
+        <label>
+          <input type="radio" name="Yeargroup" value="1" required> S1
+        </label>
+        <label>
+          <input type="radio" name="Yeargroup" value="4"> S4
+        </label>
+      </td>
+    </tr>
+    <tr class="disclaimer">
+      <td>Is English your <span title="The language you prefer to speak in"><u>dominant language?</u></span></td>
+      <td>
+        <label>
+          <input type="radio" name="Fluent" value="Y" required> Yes
+        </label>
+        <label>
+          <input type="radio" name="Fluent" value="N"> No
+        </label>
+        <label>
+          <input type="radio" name="Fluent" value="N/A"> Prefer Not to Say
+        </label>
+      </td>
+    </tr>
+    <tr class="disclaimer">
+      <td><label for="neurology">Do you have any of the following neurological conditions?:</label></td>
+      <td><select id="neurology" name="Neurology" required>
+        <option value="" disabled selected hidden> Select an option</option>
+        <option value="none">None</option>
+        <option value="colourblindness">Colourblindness</option>
+        <option value="schizophrenia">Schizophrenia</option>
+        <option value="dyslexia">Dyslexia</option>
+        <option value="adhd">ADHD</option>
+        <option value="N/A">Prefer not to say</option>
+        <option value="Other">Other</option>
+      </select></td>
+    </tr>
+    <tr class="disclaimer">
+      <td><label id="Other">If Other, Please Specify (Max 15 characters)</label></td>
+      <td><input type="text" name="Other" size="20" maxlength="15"></td>
+    </tr>
+    <tr class="disclaimer">
+      <td>Have you done a Stroop Test before?</td>
+      <td>
+        <label>
+          <input type="radio" name="Experience" value="Y" required> Yes
+        </label>
+        <label>
+          <input type="radio" name="Experience" value="N"> No
+        </label>
+      </td>
+    </tr>
+    <tr class="disclaimer">
+      <td><label for="time-of-day">What period are you doing this on?</label></td>
+      <td><select id="time-of-day" name="Period" required>
+        <option value="" disabled selected hidden>Select an option</option>
+        <option value="1">P1</option>
+        <option value="2">P2</option>
+        <option value="3">P3</option>
+        <option value="4">P4</option>
+        <option value="5">P5</option>
+        <option value="6">P6</option>
+        <option value="7">P7</option>
+      </select></td>
+    </tr>
+    <tr class="disclaimer">
+      <td>Are u cool with having an S6 read this and ur results for their Advanced Higher Biology assignment?</td>
+      <td>
+        <label>
+          <input type="radio" name="Consent" value="Y" required>Yes
+        </label>
+        <label>
+          <input type="radio" name="Consent" value="N">No
+        </label>
+      </td>
+    </tr>   
+  </table>
+  <p style="color: #0a2129;">Once you press Continue, the form will be sent and the test will begin.</p>
+  <button class="button">
+    <span class="button_top">Continue</span>
+  </button>
+</form>
+<script src="form.js"></script>
+<link rel="stylesheet" href="style.css">
+  </body>
+</html>
