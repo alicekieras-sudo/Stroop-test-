@@ -1,0 +1,180 @@
+body {
+  background-color: #00A9FF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+  width: 75vw;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+  margin-left: 30px;
+}
+
+li {
+  list-style-type: none;
+  background-color: #89CFF3;
+  border: 1px solid #A0E9FF;
+  border-radius: 12px;
+  flex: 0 0 100%;
+}
+
+li:nth-child(even) {
+  background-color: #A0E9FF;
+  border: 1px solid #89CFF3;
+  border-radius: 12px;
+}
+
+ul {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+li {
+  scroll-snap-align: center;
+}
+
+ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+ul::scroll-button(left) {
+  content: "◄" / "Previous";
+}
+
+ul::scroll-button(right) {
+  content: "►" / "Next";
+}
+
+ul {
+  anchor-name: --my-carousel;
+}
+
+ul::scroll-button(*) {
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+ul::scroll-button(left) {
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) - 15px);
+}
+
+ul::scroll-button(right) {
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) - 15px);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.one {
+  width: 30%;
+  font-weight:900;
+  display: flex;
+  gap: 350px;
+  padding-left: 200px;
+  margin: 30 60px;
+  padding-top: 30px;
+  font-size: 30px;
+  border: 5px lightblue;
+}
+
+.text {
+  padding: 75px 100px 20px 30px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.disclaimer {
+  background-color: #89CFF3;
+  border: 1px solid #A0E9FF;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 85%;
+  text-align: center;
+}
+
+.button {
+  --button_radius: 0.75em;
+  --button_color: #CDF5FD;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  padding: 0;
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+.button:active .button_top {
+  transform: translateY(0);
+}
+
+.button_row {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+
+.stroop {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 65%;
+  text-align: center;
+}
